@@ -15,7 +15,7 @@ remember to set a route to handle update of password
 
 router.post("/register", async (req, res) => {
     try {
-        const { username, password, surname, firstname, lastname, klass } = req.body;
+        const { username, password, surname, firstname, lastname, klass, contacts, subjectCombination, midTerm, examination  } = req.body;
 
         if (!password || !username || !surname || !firstname || !lastname || !klass) {
             return res.status(400).json({
@@ -51,7 +51,11 @@ router.post("/register", async (req, res) => {
             firstname,
             lastname,
             class: klass,
-            dateOfBirth: Date.now()
+            dateOfBirth: Date.now(),
+            contacts,
+            subjectCombination,
+            midTerm,
+            examination
         });
 
 

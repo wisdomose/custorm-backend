@@ -34,12 +34,36 @@ const student = new Schema({
         default:undefined
     },
     midTerm:{
-        type:[result],
-        default:undefined
+        result: {
+            type:[result],
+            default:undefined
+        },
+        remarks:[
+            // {classTeachersRemark:{type:String}},
+            // {HeadTeachersRemark:{type:String}},
+            // {resumptionDate:{type:Date, default:Date.now}},
+            // {date:{type:Date, default:Date.now}},
+            // {totalScore:{type:Number}},
+            // {marksObtainable:{type:Number}},
+            // {position:{type:Number}},
+            // {average:{type:Number}}
+        ],
     },
     examination:{
-        type:[result],
-        default:undefined
+        result: {
+            type:[result],
+            default:undefined
+        },
+        remarks:[
+            // {classTeachersRemark:{type:String}},
+            // {HeadTeachersRemark:{type:String}},
+            // {resumptionDate:{type:Date}},
+            // {date:{type:Date}},
+            // {totalScore:{type:Number}},
+            // {marksObtainable:{type:Number}},
+            // {position:{type:Number}},
+            // {average:{type:Number}}
+        ],
     }
 });
 
