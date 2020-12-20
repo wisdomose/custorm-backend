@@ -100,9 +100,9 @@ router.post("/login", async (req, res) => {
             return res.status(400).json({ msg: "invalid credentials" });
         }
 
-        if(!student.paid){
-            return res.status(400).json({ message: "no permission to login please contact the school authority" });
-        }
+        // if(!student.paid){
+        //     return res.status(400).json({ message: "no permission to login please contact the school authority" });
+        // }
 
         //creates a token for the user
         const token = jwt.sign({ 
