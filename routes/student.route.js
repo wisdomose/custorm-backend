@@ -180,7 +180,7 @@ router.put("/update", validateAdmin, async(req,res)=>{
     }
 })
 
-router.get("/", validateAdmin, async(req,res)=>{
+router.get("/", async(req,res)=>{
     try{
         const students = await StudentModel.find({});
         if(!students){
