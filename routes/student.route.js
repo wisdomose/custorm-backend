@@ -4,6 +4,7 @@ const StudentModel = require("../models/students");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const validateAdmin = require("../middlewares/validateAdmin")
+const validateToken = require("../middlewares/validateToken")
 
 
 /*
