@@ -209,4 +209,17 @@ router.get("/profile/:token", validateToken, async(req,res)=>{
     }
 })
 
+router.get("/validate/:token", validateToken, async(req,res)=>{
+    try{
+         const student = await StudentModel.findById(req.userID);
+         res.status(200).json({
+             message:"valid token"
+         });
+    }catch(error){
+        res.status(500).json({
+            message:"invalid token"
+        })
+    }
+})
+
 module.exports = router;
