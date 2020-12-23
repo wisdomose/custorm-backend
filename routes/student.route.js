@@ -16,9 +16,9 @@ remember to set a route to handle update of password
 
 router.post("/register", async (req, res) => {
     try {
-        const { username, password, surname, firstname, lastname, klass, contacts, subjectCombination, midTerm, examination  } = req.body;
+        const { username, password, surname, firstname, lastname, klass, contacts, subjectCombination, midTerm, examination, adminNumber  } = req.body;
 
-        if (!password || !username || !surname || !firstname || !lastname || !klass) {
+        if (!password || !username || !surname || !firstname || !lastname || !klass || !adminNumber) {
             return res.status(400).json({
                 msg: "check input credentials"
             });
@@ -29,8 +29,6 @@ router.post("/register", async (req, res) => {
                 msg: "your password should be at least 6 characters long"
             });
         }
-
-
 
         const existingStudent = await StudentModel.findOne({ username });
         if (existingStudent) {
@@ -52,6 +50,7 @@ router.post("/register", async (req, res) => {
             firstname,
             lastname,
             class: klass,
+            adminNumber,
             dateOfBirth: Date.now(),
             contacts,
             subjectCombination,

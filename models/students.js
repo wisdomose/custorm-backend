@@ -15,6 +15,16 @@ const contact = new Schema({
     contact:{type:String, required:true}
 })
 
+
+const remark = new Schema({
+        classTeachersRemark: {type:String, required:true},
+        HeadTeachersRemark: {type:String, required:true},
+        totalScore: {type:Number, required:true},
+        marksObtainable: {type:Number, required:true},
+        position: {type:Number, required:true},
+        average: {type:Number, required:true},
+})
+
 const student = new Schema({
     username:{type:String, required:true},
     password:{type:String, required:true},
@@ -25,6 +35,7 @@ const student = new Schema({
     paid:{type:Boolean, default:false},
     createdAt:{type:Date, default:Date.now},
     dateOfBirth:{type:Date, required:true},
+    adminNumber: {type:String, required:true},
     contacts:{
         type:[contact],
         default:undefined
@@ -38,32 +49,14 @@ const student = new Schema({
             type:[result],
             default:undefined
         },
-        remarks:[
-            // {classTeachersRemark:{type:String}},
-            // {HeadTeachersRemark:{type:String}},
-            // {resumptionDate:{type:Date, default:Date.now}},
-            // {date:{type:Date, default:Date.now}},
-            // {totalScore:{type:Number}},
-            // {marksObtainable:{type:Number}},
-            // {position:{type:Number}},
-            // {average:{type:Number}}
-        ],
+        remarks: remark,
     },
     examination:{
         result: {
             type:[result],
             default:undefined
         },
-        remarks:[
-            // {classTeachersRemark:{type:String}},
-            // {HeadTeachersRemark:{type:String}},
-            // {resumptionDate:{type:Date}},
-            // {date:{type:Date}},
-            // {totalScore:{type:Number}},
-            // {marksObtainable:{type:Number}},
-            // {position:{type:Number}},
-            // {average:{type:Number}}
-        ],
+        remarks:remark,
     }
 });
 
