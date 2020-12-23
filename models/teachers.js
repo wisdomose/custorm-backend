@@ -6,6 +6,7 @@ const subject = new Schema({
 })
 
 const teacher = new Schema({
+    profilePic:{type:String},
     username:{type:String, required:true},
     password:{type:String, required:true},
     surname:{type:String, required:true},
@@ -17,9 +18,9 @@ const teacher = new Schema({
     dateOfBirth:{type:Date, required:true},
     subjectCombination:{
         type:[subject],
-        default:[]
+        default:undefined
     }
 });
 
-Teacher = mongoose.model("Teacher", teacher);
+Teacher = mongoose.model("Staff", teacher);
 module.exports = Teacher;

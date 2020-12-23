@@ -20,20 +20,20 @@ router.post("/register", async (req, res) => {
 
         if (!password || !username || !surname || !firstname || !lastname || !klass || !adminNumber) {
             return res.status(400).json({
-                msg: "check input credentials"
+                message: "check input credentials"
             });
         }
 
         if (password.length <= 5) {
             return res.status(400).json({
-                msg: "your password should be at least 6 characters long"
+                message: "your password should be at least 6 characters long"
             });
         }
 
         const existingStudent = await StudentModel.findOne({ username });
         if (existingStudent) {
             return res.status(200).json({
-                msg: "A user with this username already exists"
+                message: "A user with this username already exists"
             });
         }
 
@@ -76,12 +76,12 @@ router.post("/login", async (req, res) => {
 
         //if no username or password in the req body
         if (!username || !password) {
-            res.status(400).json({ msg: "not all fields are entered" });
+            res.status(400).json({ message: "not all fields are entered" });
         }
 
         //if password is less than 5
         if (password.length < 5) {
-            res.status(400).json({ msg: "password must be at least five characters long" });
+            res.status(400).json({ message: "password must be at least five characters long" });
         }
 
         //if user exists get user from the DB
@@ -89,7 +89,7 @@ router.post("/login", async (req, res) => {
 
         //if user dosent exist this runs
         if (!student) {
-            return res.status(400).json({ msg: "no account found" });
+            return res.status(400).json({ message: "no account found" });
         }
 
         //compares users password with crypted password in DB
@@ -97,7 +97,7 @@ router.post("/login", async (req, res) => {
 
         //if passwords dont match run
         if (!passwordMatch) {
-            return res.status(400).json({ msg: "invalid credentials" });
+            return res.status(400).json({ message: "invalid credentials" });
         }
 
         // if(!student.paid){
@@ -115,7 +115,7 @@ router.post("/login", async (req, res) => {
         });
 
     } catch (error) {
-        return res.status(500).json({ msg: "invalid crredentials" })
+        return res.status(500).json({ message: "invalid crredentials" })
     }
 })
 
@@ -127,7 +127,7 @@ router.delete("/delete/:id", validateAdmin, async(req,res)=>{
         // prints an error if he dosent exist
         if(!student){
             return res.status(404).json({
-                msg:"student not found"
+                message:"student not found"
             }) 
         }
 
@@ -135,12 +135,12 @@ router.delete("/delete/:id", validateAdmin, async(req,res)=>{
         await StudentModel.findByIdAndDelete(req.params.id, (error, doc)=>{
             if(error){
                 return res.status(404).json({
-                    msg:"student not found"
+                    message:"student not found"
                 }) 
             }
             return(
                 res.status(200).json({
-                    msg:"account successfully deleted"
+                    message:"account successfully deleted"
                 })
             )
         })
@@ -159,7 +159,7 @@ router.put("/update", validateAdmin, async(req,res)=>{
         // return error if student dosent exist
         if(!student){
             return res.status(404).json({
-                msg:"authorization failed"
+                message:"authorization failed"
             }) 
         }
 
@@ -167,11 +167,11 @@ router.put("/update", validateAdmin, async(req,res)=>{
         StudentModel.findByIdAndUpdate(req.user.id, req.body, {useFindAndModify:false}, (error, doc)=>{
             if (error){
                 return res.status(404).json({
-                    msg:"update failed"
+                    message:"update failed"
                 }) 
             }
             return res.status(200).json({
-                msg:"successfully updated record"
+                message:"successfully updated record"
             })
         })
     }    
@@ -185,7 +185,7 @@ router.get("/", async(req,res)=>{
         const students = await StudentModel.find({});
         if(!students){
             res.status(404).json({
-                msg:"Oops! students not found"
+                message:"Oops! students not found"
             })
         }
 

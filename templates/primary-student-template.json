@@ -1,4 +1,7 @@
 {
+  "student1":{
+  "adminNumber":"0100",
+  "dateOfBirth":"11222222333333",
   "username": "emmanuel",
   "password": "123456",
   "surname": "iyoriobhe",
@@ -15,7 +18,7 @@
       "contact": "09039392400"
     }
   ],
-  "subjectCombination": ["mathematics", "english language", "civic education", "agricultural science", "french", "music"],
+  "subjectCombination": ["mathematics", "english language", "national and value education", "pre vocational studies", "basic science and technology", "bible knowledge", "hand writing", "verbal reasoning", "quantitative reasoning", "dictation", "french", "music"],
 
   "midTerm": {
     "result":[
@@ -28,10 +31,10 @@
         "score": 70
       },
       {
-        "subject": "civic education",
+        "subject": "national and value education",
         "score": 40
       },          {
-        "subject": "agricultural science",
+        "subject": "pre vocational studies",
         "score": 35
       },          {
         "subject": "french",
@@ -39,11 +42,29 @@
       },          {
         "subject": "music",
         "score": 40
+      },          {
+        "subject": "basic science and technology",
+        "score": 40
+      },          {
+        "subject": "bible knowledge",
+        "score": 40
+      },          {
+        "subject": "hand writing",
+        "score": 40
+      },          {
+        "subject": "verbal reasoning",
+        "score": 40
+      },          {
+        "subject": "quantitative reasoning",
+        "score": 40
+      },          {
+        "subject": "dictation",
+        "score": 40
       }
     ],
       "remarks":{
         "classTeachersRemark":"On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks. When you create pictures, charts, or diagrams, they also coordinate with your current document look.You can easily change the formatting of selected text in the document text by choosing a look for the selected text from the Quick Styles gallery on the Home tab. You can also format text directly by using the other controls on the Home tab. Most controls offer a choice of using the look from the current theme or using a format that you specify directly.To change the overall look of your document, choose new Theme elements on the Page Layout tab. To change the looks available in the Quick Style gallery, use the Change Current Quick Style Set command. Both the Themes gallery and the Quick Styles gallery provide reset commands so that you can always restore the look of your document to the original contained in your current template.",
-        "HeadTeachersRemark":"On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks. When you create pictures, charts, or diagrams, they also coordinate with your current document look.You can easily change the formatting of selected text in the document text by choosing a look for the selected text from the Quick Styles gallery on the Home tab. You can also format text directly by using the other controls on the Home tab. Most controls offer a choice of using the look from the current theme or using a format that you specify directly.To change the overall look of your document, choose new Theme elements on the Page Layout tab. To change the looks available in the Quick Style gallery, use the Change Current Quick Style Set command. Both the Themes gallery and the Quick Styles gallery provide reset commands so that you can always restore the look of your document to the original contained in your current template.",
+        "headTeachersRemark":"On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks. When you create pictures, charts, or diagrams, they also coordinate with your current document look.You can easily change the formatting of selected text in the document text by choosing a look for the selected text from the Quick Styles gallery on the Home tab. You can also format text directly by using the other controls on the Home tab. Most controls offer a choice of using the look from the current theme or using a format that you specify directly.To change the overall look of your document, choose new Theme elements on the Page Layout tab. To change the looks available in the Quick Style gallery, use the Change Current Quick Style Set command. Both the Themes gallery and the Quick Styles gallery provide reset commands so that you can always restore the look of your document to the original contained in your current template.",
         "marksObtainable":1000,
         "position":1,
         "average":70
@@ -62,11 +83,11 @@
         "score": 70
       },
       {
-        "subject": "civic education",
+        "subject": "national and value education",
         "midTerm":30,
         "score": 40
       },          {
-        "subject": "agricultural science",
+        "subject": "pre vocational studies",
         "midTerm":12,
         "score": 35
       },          {
@@ -77,14 +98,194 @@
         "subject": "music",
         "midTerm":30,
         "score": 40
+      },          {
+        "subject": "basic science and technology",
+        "midTerm":30,
+        "score": 30
+      },          {
+        "subject": "bible knowledge",
+        "midTerm":12.5,
+        "score": 43
+      },          {
+        "subject": "hand writing",
+        "midTerm":23,
+        "score": 60
+      },          {
+        "subject": "verbal reasoning",
+        "midTerm":30,
+        "score": 23
+      },          {
+        "subject": "quantitative reasoning",
+        "midTerm":24,
+        "score": 30
+      },          {
+        "subject": "dictation",
+        "midTerm":30,
+        "score": 50
       }
     ],
       "remarks":{
-        "classTeachersRemark":"On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks. When you create pictures, charts, or diagrams, they also coordinate with your current document look.You can easily change the formatting of selected text in the document text by choosing a look for the selected text from the Quick Styles gallery on the Home tab. You can also format text directly by using the other controls on the Home tab. Most controls offer a choice of using the look from the current theme or using a format that you specify directly.To change the overall look of your document, choose new Theme elements on the Page Layout tab. To change the looks available in the Quick Style gallery, use the Change Current Quick Style Set command. Both the Themes gallery and the Quick Styles gallery provide reset commands so that you can always restore the look of your document to the original contained in your current template.",
-        "HeadTeachersRemark":"On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks. When you create pictures, charts, or diagrams, they also coordinate with your current document look.You can easily change the formatting of selected text in the document text by choosing a look for the selected text from the Quick Styles gallery on the Home tab. You can also format text directly by using the other controls on the Home tab. Most controls offer a choice of using the look from the current theme or using a format that you specify directly.To change the overall look of your document, choose new Theme elements on the Page Layout tab. To change the looks available in the Quick Style gallery, use the Change Current Quick Style Set command. Both the Themes gallery and the Quick Styles gallery provide reset commands so that you can always restore the look of your document to the original contained in your current template.",
+        "classTeachersRemark":"On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks. When you create pictures, charts, or diagrams, they also coordinate with your current document look.You can easily change the formatting of selected text in the document text by choosing a look for the selected text from the Quick Styles gallery on the Home tab.",
+        "headTeachersRemark":"On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks. When you create pictures, charts, or diagrams, they also coordinate with your current document look.You can easily change the formatting of selected text in the document text by choosing a look for the selected text from the Quick Styles gallery on the Home tab.",
         "marksObtainable":1000,
         "position":1,
         "average":70
       }
   }
+},
+"student2":{
+  "adminNumber":"0020",
+  "profilePic":"",
+  "username": "osenemendia",
+  "password": "123456",
+  "surname": "akpan",
+  "firstname": "fredrick",
+  "lastname": "barbara",
+  "klass": "emerald",
+  "contacts": [
+    {
+      "name": "mr divine patrick",
+      "contact": "09054057103"
+    },
+    {
+      "name": "mrs divine elizabeth",
+      "contact": "09039392400"
+    }
+  ],
+  "subjectCombination": ["letter work", "number work", "health education", "bible knowledge", "moral and social habit", "poem songs and rhymes", "hand writing", "dictation", "fine art", "security education", "news", "phonetics", "current affairs", "reading comprehension", "elementary science"],
+
+  "midTerm": {
+    "result":[
+      {
+        "subject": "letter work",
+        "score": 50
+      },
+      {
+        "subject": "number work",
+        "score": 70
+      },
+      {
+        "subject": "health education",
+        "score": 40
+      },          {
+        "subject": "bible knowledge",
+        "score": 35
+      },          {
+        "subject": "moral and social habit",
+        "score": 30
+      },          {
+        "subject": "poem songs and rhymes",
+        "score": 40
+      },          {
+        "subject": "hand writing",
+        "score": 40
+      },          {
+        "subject": "dictation",
+        "score": 40
+      },          {
+        "subject": "fine art",
+        "score": 40
+      },          {
+        "subject": "security education",
+        "score": 40
+      },          {
+        "subject": "news",
+        "score": 40
+      },          {
+        "subject": "phonetics",
+        "score": 40
+      },          {
+        "subject": "current affairs",
+        "score": 40
+      },          {
+        "subject": "reading comprehension",
+        "score": 40
+      },          {
+        "subject": "elementary science",
+        "score": 40
+      }
+    ],
+    "remarks":{
+      "classTeachersRemark":"On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks. When you create pictures, charts, or diagrams, they also coordinate with your current document look.You can easily change the formatting of selected text in the document text by choosing a look for the selected text from the Quick Styles gallery on the Home tab. You can also format text directly by using the other controls on the Home tab. Most controls offer a choice of using the look from the current theme or using a format that you specify directly.To change the overall look of your document, choose new Theme elements on the Page Layout tab. To change the looks available in the Quick Style gallery, use the Change Current Quick Style Set command. Both the Themes gallery and the Quick Styles gallery provide reset commands so that you can always restore the look of your document to the original contained in your current template.",
+      "headTeachersRemark":"On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks. When you create pictures, charts, or diagrams, they also coordinate with your current document look.You can easily change the formatting of selected text in the document text by choosing a look for the selected text from the Quick Styles gallery on the Home tab. You can also format text directly by using the other controls on the Home tab. Most controls offer a choice of using the look from the current theme or using a format that you specify directly.To change the overall look of your document, choose new Theme elements on the Page Layout tab. To change the looks available in the Quick Style gallery, use the Change Current Quick Style Set command. Both the Themes gallery and the Quick Styles gallery provide reset commands so that you can always restore the look of your document to the original contained in your current template.",
+      "marksObtainable":1000,
+      "position":1,
+      "average":70
+      }
+  },
+  "examination": {
+    "result":[
+      {
+        "subject": "letter work",
+        "midTerm":30,
+        "score": 50
+      },
+      {
+        "subject": "number work",
+        "midTerm":30,
+        "score": 70
+      },
+      {
+        "subject": "health education",
+        "midTerm":30,
+        "score": 40
+      },          {
+        "subject": "bible knowledge",
+        "midTerm":30,
+        "score": 35
+      },          {
+        "subject": "moral and social habit",
+        "midTerm":30,
+        "score": 30
+      },          {
+        "subject": "poem songs and rhymes",
+        "midTerm":30,
+        "score": 40
+      },          {
+        "subject": "hand writing",
+        "midTerm":30,
+        "score": 40
+      },          {
+        "subject": "dictation",
+        "midTerm":30,
+        "score": 40
+      },          {
+        "subject": "fine art",
+        "midTerm":30,
+        "score": 40
+      },          {
+        "subject": "security education",
+        "midTerm":30,
+        "score": 40
+      },          {
+        "subject": "news",
+        "midTerm":30,
+        "score": 40
+      },          {
+        "subject": "phonetics",
+        "midTerm":30,
+        "score": 40
+      },          {
+        "subject": "current affairs",
+        "midTerm":30,
+        "score": 40
+      },          {
+        "subject": "reading comprehension",
+        "midTerm":30,
+        "score": 40
+      },          {
+        "subject": "elementary science",
+        "midTerm":30,
+        "score": 40
+      }
+    ],
+      "remarks":{
+        "classTeachersRemark":"On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks. When you create pictures, charts, or diagrams, they also coordinate with your current document look.You can easily change the formatting of selected text in the document text by choosing a look for the selected text from the Quick Styles gallery on the Home tab.",
+        "headTeachersRemark":"On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks. When you create pictures, charts, or diagrams, they also coordinate with your current document look.You can easily change the formatting of selected text in the document text by choosing a look for the selected text from the Quick Styles gallery on the Home tab.",
+        "marksObtainable":1000,
+        "position":2,
+        "average":70
+      }
+  }
+}
 }

@@ -3,20 +3,15 @@ const {Schema} = mongoose;
 
 const result = new Schema({
     subject:{type:String, required:true},
-    midTerm:{type:Number, required:true},
-    exam:{type:Number, required:true},
+    cat:{type:Number, required:true},
+    score:{type:Number, required:true},
 });
 
 const remark = new Schema({
         classTeachersRemark: {type:String, required:true},
-        principalsRemark: {type:String, required:true},
-        totalScore: {type:Number, required:true},
+        principlasRemark: {type:String, required:true},
         position: {type:Number, required:true},
         average: {type:Number, required:true},
-})
-
-const subject = new Schema({
-    subject:{type:String}
 })
 
 const contact = new Schema({
@@ -25,6 +20,7 @@ const contact = new Schema({
 })
 
 const student = new Schema({
+    profilePic:{type:String},
     username:{type:String, required:true},
     password:{type:String, required:true},
     surname:{type:String, required:true},
@@ -39,12 +35,19 @@ const student = new Schema({
         type:[contact],
         default:undefined
     },
-    subjectCombination:{
-        type:[subject],
-        default:undefined
-    },
-    cat1:[{default:undefined}],
-    cat2:[{default:undefined}],
+    subjectCombination:[],
+    cat1:[
+        {
+            subject:{type:String, required:true},
+            score:{type:Number, required:true}
+        }
+    ],
+    cat2:[
+        {
+            subject:{type:String, required:true},
+            score:{type:Number, required:true}
+        }
+    ],
     examination:{
         result: {
             type:[result],
@@ -54,5 +57,5 @@ const student = new Schema({
     }
 });
 
-Student = mongoose.model("senior", student);
+Student = mongoose.model("Secondary", student);
 module.exports = Student;
