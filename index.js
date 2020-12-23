@@ -16,4 +16,5 @@ mongoose.connect(process.env.CONNECTION_STRING,
         useCreateIndex: true
     }, ()=>console.log("app connected successfully"));
 
-app.use("/student", require("./routes/student.route"))
+app.use("/student/primary", require("./routes/primaryStudent.route"))
+app.use("/student/secondary", require("./routes/seniorStudent.route"))

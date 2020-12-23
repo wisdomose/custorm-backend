@@ -6,6 +6,12 @@ const result = new Schema({
     score:{type:Number, required:true},
 });
 
+const examinationResult = new Schema({
+    subject:{type:String, required:true},
+    midTerm:{type:Number, required:true},
+    exam:{type:Number, required:true},
+});
+
 const subject = new Schema({
     subject:{type:String}
 })
@@ -15,12 +21,10 @@ const contact = new Schema({
     contact:{type:String, required:true}
 })
 
-
 const remark = new Schema({
         classTeachersRemark: {type:String, required:true},
-        HeadTeachersRemark: {type:String, required:true},
+        headTeachersRemark: {type:String, required:true},
         totalScore: {type:Number, required:true},
-        marksObtainable: {type:Number, required:true},
         position: {type:Number, required:true},
         average: {type:Number, required:true},
 })
@@ -53,7 +57,7 @@ const student = new Schema({
     },
     examination:{
         result: {
-            type:[result],
+            type:[examinationResult],
             default:undefined
         },
         remarks:remark,

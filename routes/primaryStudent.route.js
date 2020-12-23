@@ -1,6 +1,6 @@
 `node --trace-warnings`
 const router = require("express").Router();
-const StudentModel = require("../models/students");
+const StudentModel = require("../models/primaryStudents");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const validateAdmin = require("../middlewares/validateAdmin")
