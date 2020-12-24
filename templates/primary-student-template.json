@@ -21,7 +21,7 @@
   "subjectCombination": ["mathematics", "english language", "national and value education", "pre vocational studies", "basic science and technology", "bible knowledge", "hand writing", "verbal reasoning", "quantitative reasoning", "dictation", "french", "music"],
 
   "midTerm": {
-    "result":[
+    "results":[
       {
         "subject": "mathematics",
         "score": 50
@@ -71,7 +71,7 @@
       }
   },
   "examination": {
-    "result":[
+    "results":[
       {
         "subject": "mathematics",
         "midTerm":27,
@@ -155,7 +155,7 @@
   "subjectCombination": ["letter work", "number work", "health education", "bible knowledge", "moral and social habit", "poem songs and rhymes", "hand writing", "dictation", "fine art", "security education", "news", "phonetics", "current affairs", "reading comprehension", "elementary science"],
 
   "midTerm": {
-    "result":[
+    "results":[
       {
         "subject": "letter work",
         "score": 50
@@ -214,7 +214,7 @@
       }
   },
   "examination": {
-    "result":[
+    "results":[
       {
         "subject": "letter work",
         "midTerm":30,

@@ -92,7 +92,7 @@
         }
     ],
     "examination": {
-      "result":[
+      "results":[
           {
             "subject": "mathematics",
             "cat":27,
@@ -263,7 +263,7 @@
         }
     ],
     "examination": {
-      "result":[
+      "results":[
           {
             "subject": "mathematics",
             "cat":27,

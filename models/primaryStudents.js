@@ -46,14 +46,14 @@ const student = new Schema({
     },
     subjectCombination:[],
     midTerm:{
-        result: {
+        results: {
             type:[result],
             default:undefined
         },
         remarks: remark,
     },
     examination:{
-        result: {
+        results: {
             type:[examinationResult],
             default:undefined
         },

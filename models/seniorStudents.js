@@ -49,7 +49,7 @@ const student = new Schema({
         }
     ],
     examination:{
-        result: {
+        results: {
             type:[result],
             default:undefined
         },
