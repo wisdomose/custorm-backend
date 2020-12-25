@@ -15,13 +15,15 @@ remember to set a route to handle update of password
 
 router.post("/register", async (req, res) => {
     try {
-        const { username, password, surname, firstname, lastname, klass, contacts, subjectCombination, cat1, cat2, examination, adminNumber  } = req.body;
+        const { username, password, surname, firstname, lastname, klass, contacts, subjectCombination, cat1, cat2, examination, adminNumber, paid } = req.body;
 
         if (!password || !username || !surname || !firstname || !lastname || !klass || !adminNumber) {
             return res.status(400).json({
                 message: "check input credentials"
             });
         }
+        console.log(cat1)
+
 
         if (password.length <= 5) {
             return res.status(400).json({
@@ -37,25 +39,27 @@ router.post("/register", async (req, res) => {
         }
 
 
+
         //hashes the password
         const salt = await bcrypt.genSalt();
         const hashedPassword = await bcrypt.hash(password, salt);
 
         
         const newStudent = new StudentModel({
-            username,
+            subjectCombination,
+            cat1,
+            cat2,
+            examination,
             password: hashedPassword,
+            username,
             surname,
             firstname,
             lastname,
             class: klass,
+            paid,
             adminNumber,
             dateOfBirth: Date.now(),
             contacts,
-            subjectCombination,
-            cat1,
-            cat2,
-            examination
         });
 
 
@@ -100,9 +104,9 @@ router.post("/login", async (req, res) => {
             return res.status(400).json({ message: "invalid credentials" });
         }
 
-        // if(!student.paid){
-        //     return res.status(400).json({ message: "no permission to login please contact the school authority" });
-        // }
+        if(!student.paid){
+            return res.status(400).json({ message: "no permission to login please contact the school authority" });
+        }
 
         //creates a token for the user
         const token = jwt.sign({ 

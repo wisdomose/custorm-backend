@@ -1,6 +1,7 @@
 {
   "student 1":{
     "adminNumber":"0010",
+    "paid":true,
     "profilePic":"",
     "dateOfBirth":"122222222222222222222222",
     "username": "ose1234",
@@ -21,76 +22,80 @@
     ],
     "subjectCombination": ["mathematics", "english language", "civic education", "agricultural science", "physics", "chemistry",
       "biology", "geography", "tourism", "further mathematics"],
-    "cat1":[
-          {
-            "subject": "mathematics",
-            "score": 20
-          },
-          {
-            "subject": "english language",
-            "score": 10
-          },
-          {
-            "subject": "civic education",
-            "score": 23
-          },          {
-            "subject": "agricultural science",
-            "score": 16
-          },          {
-            "subject": "physics",
-            "score": 30
-          },          {
-            "subject": "chemistry",
-            "score": 12
-          },          {
-            "subject": "biology",
-            "score": 12
-          },          {
-            "subject": "geography",
-            "score": 12
-          },          {
-            "subject": "tourism",
-            "score": 12
-          },          {
-            "subject": "further mathematics",
-            "score": 12
-          }
-        ],
-    "cat2":[
+    "cat1":{
+      "results":[
         {
-            "subject": "mathematics",
-            "score": 20
-        },
+        "subject": "mathematics",
+        "score": 20
+      },
+      {
+        "subject": "english language",
+        "score": 10
+      },
+      {
+        "subject": "civic education",
+        "score": 23
+      },          {
+        "subject": "agricultural science",
+        "score": 16
+      },          {
+        "subject": "physics",
+        "score": 30
+      },          {
+        "subject": "chemistry",
+        "score": 12
+      },          {
+        "subject": "biology",
+        "score": 12
+      },          {
+        "subject": "geography",
+        "score": 12
+      },          {
+        "subject": "tourism",
+        "score": 12
+      },          {
+        "subject": "further mathematics",
+        "score": 12
+      }],
+      "published":true
+    },
+    "cat2":{
+      "results":[
         {
-            "subject": "english language",
-            "score": 10
-        },
-        {
-            "subject": "civic education",
-            "score": 23
-        },          {
-            "subject": "agricultural science",
-            "score": 16
-        },          {
-          "subject": "physics",
-          "score": 30
-        },          {
-          "subject": "chemistry",
-          "score": 12
-        },          {
-          "subject": "biology",
-          "score": 12
-        },          {
-          "subject": "geography",
-          "score": 12
-        },          {
-          "subject": "tourism",
-          "score": 12
-        },          {
-          "subject": "further mathematics",
-          "score": 12
-        }
-    ],
+        "subject": "mathematics",
+        "score": 20
+    },
+    {
+        "subject": "english language",
+        "score": 10
+    },
+    {
+        "subject": "civic education",
+        "score": 23
+    },          {
+        "subject": "agricultural science",
+        "score": 16
+    },          {
+      "subject": "physics",
+      "score": 30
+    },          {
+      "subject": "chemistry",
+      "score": 12
+    },          {
+      "subject": "biology",
+      "score": 12
+    },          {
+      "subject": "geography",
+      "score": 12
+    },          {
+      "subject": "tourism",
+      "score": 12
+    },          {
+      "subject": "further mathematics",
+      "score": 12
+    }],
+    "published":true
+    },
     "examination": {
       "results":[
           {
@@ -138,17 +143,19 @@
           }
         ],
         "remarks":{
-          "classTeachersRemark":"On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks. When you create pictures, charts, or diagrams, they also coordinate with your current document look.You can easily change the formatting of selected text in the document text by choosing a look for the selected text from the Quick Styles gallery on the Home tab. You can also format text directly by using the other controls on the Home tab. Most controls offer a choice of using the look from the current theme or using a format that you specify directly.To change the overall look of your document, choose new Theme elements on the Page Layout tab. To change the looks available in the Quick Style gallery, use the Change Current Quick Style Set command. Both the Themes gallery and the Quick Styles gallery provide reset commands so that you can always restore the look of your document to the original contained in your current template.",
-          "principlasRemark":"On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks. When you create pictures, charts, or diagrams, they also coordinate with your current document look.You can easily change the formatting of selected text in the document text by choosing a look for the selected text from the Quick Styles gallery on the Home tab. You can also format text directly by using the other controls on the Home tab. Most controls offer a choice of using the look from the current theme or using a format that you specify directly.To change the overall look of your document, choose new Theme elements on the Page Layout tab. To change the looks available in the Quick Style gallery, use the Change Current Quick Style Set command. Both the Themes gallery and the Quick Styles gallery provide reset commands so that you can always restore the look of your document to the original contained in your current template.",
+          "classTeachersRemark":"On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks.",
+          "principlasRemark":"On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks.",
           "marksObtainable":1000,
           "position":3,
           "average":60.5
-        }
+        },
+      "published":true
     }
   },
   "student2":{
     "dateOfBirth":"122222222222222222222222",
     "adminNumber":"0030",
+    "paid":true,
     "profilePic":"",
     "username": "jacobi",
     "password": "123456",
@@ -168,100 +175,78 @@
     ],
     "subjectCombination": ["mathematics", "english language", "civic education", "agricultural science", "french", "music", "social studies",
     "christian religious knowledge", "physical and health education", "basic science", "basic technology", "fine arts", "business studies", "hausa"],
-    "cat1": [
-          {
-            "subject": "mathematics",
-            "score": 20
-          },
-          {
-            "subject": "english language",
-            "score": 10
-          },
-          {
-            "subject": "civic education",
-            "score": 23
-          },          {
-            "subject": "agricultural science",
-            "score": 16
-          },          {
-            "subject": "french",
-            "score": 30
-          },          {
-            "subject": "music",
-            "score": 12
-          },          {
-            "subject": "social studies",
-            "score": 12
-          },          {
-            "subject": "christian religious knowledge",
-            "score": 12
-          },          {
-            "subject": "physical and health education",
-            "score": 12
-          },          {
-            "subject": "basic science",
-            "score": 12
-          },          {
-            "subject": "basic technology",
-            "score": 12
-          },          {
-            "subject": "fine arts",
-            "score": 12
-          },          {
-            "subject": "business studies",
-            "score": 12
-          },          {
-            "subject": "hausa",
-            "score": 12
-          }
-        ],
-    "cat2": [
-        {
-            "subject": "mathematics",
-            "score": 20
-        },
-        {
-            "subject": "english language",
-            "score": 10
-        },
-        {
-            "subject": "civic education",
-            "score": 23
-        },          {
-            "subject": "agricultural science",
-            "score": 16
-        },          {
-            "subject": "french",
-            "score": 30
-        },          {
-            "subject": "music",
-            "score": 12
-        },          {
-          "subject": "social studies",
-          "score": 12
-        },          {
-          "subject": "christian religious knowledge",
-          "score": 12
-        },          {
-          "subject": "physical and health education",
-          "score": 12
-        },          {
-          "subject": "basic science",
-          "score": 12
-        },          {
-          "subject": "basic technology",
-          "score": 12
-        },          {
-          "subject": "fine arts",
-          "score": 12
-        },          {
-          "subject": "business studies",
-          "score": 12
-        },          {
-          "subject": "hausa",
-          "score": 12
-        }
-    ],
+    "cat1":{
+      "results":[{
+        "subject": "mathematics",
+        "score": 20
+      },
+      {
+        "subject": "english language",
+        "score": 10
+      },
+      {
+        "subject": "civic education",
+        "score": 23
+      },          {
+        "subject": "agricultural science",
+        "score": 16
+      },          {
+        "subject": "physics",
+        "score": 30
+      },          {
+        "subject": "chemistry",
+        "score": 12
+      },          {
+        "subject": "biology",
+        "score": 12
+      },          {
+        "subject": "geography",
+        "score": 12
+      },          {
+        "subject": "tourism",
+        "score": 12
+      },          {
+        "subject": "further mathematics",
+        "score": 12
+      }],
+      "published":true
+    },
+    "cat2":{
+      "results":[{
+        "subject": "mathematics",
+        "score": 20
+    },
+    {
+        "subject": "english language",
+        "score": 10
+    },
+    {
+        "subject": "civic education",
+        "score": 23
+    },          {
+        "subject": "agricultural science",
+        "score": 16
+    },          {
+      "subject": "physics",
+      "score": 30
+    },          {
+      "subject": "chemistry",
+      "score": 12
+    },          {
+      "subject": "biology",
+      "score": 12
+    },          {
+      "subject": "geography",
+      "score": 12
+    },          {
+      "subject": "tourism",
+      "score": 12
+    },          {
+      "subject": "further mathematics",
+      "score": 12
+    }],
+    "published":true
+    },
     "examination": {
       "results":[
           {
@@ -283,54 +268,39 @@
             "cat":12,
             "score": 35
           },          {
-            "subject": "french",
-            "cat":10,
+            "subject": "physics",
+            "cat":30,
             "score": 30
           },          {
-            "subject": "music",
-            "cat":30,
-            "score": 40
+            "subject": "chemistry",
+            "cat":13,
+            "score": 12
           },          {
-            "subject": "social studies",
-            "cat":12,
-            "score": 35
+            "subject": "biology",
+            "cat":21,
+            "score": 12
           },          {
-            "subject": "christian religious knowledge",
-            "cat":20.5,
-            "score": 50
-          },          {
-            "subject": "physical and health education",
-            "cat":30,
-            "score": 25
-          },          {
-            "subject": "basic science",
-            "cat":25,
-            "score": 31
-          },          {
-            "subject": "basic technology",
-            "cat":20,
-            "score": 70
-          },          {
-            "subject": "fine arts",
-            "cat":23.8,
-            "score": 65
-          },          {
-            "subject": "business studies",
+            "subject": "geography",
             "cat":29,
-            "score": 54
+            "score": 12
           },          {
-            "subject": "hausa",
-            "cat":1.4,
+            "subject": "tourism",
+            "cat":14.5,
+            "score": 12
+          },          {
+            "subject": "further mathematics",
+            "cat":12.3,
             "score": 12
           }
         ],
         "remarks":{
-          "classTeachersRemark":"On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks. When you create pictures, charts, or diagrams, they also coordinate with your current document look.You can easily change the formatting of selected text in the document text by choosing a look for the selected text from the Quick Styles gallery on the Home tab. You can also format text directly by using the other controls on the Home tab. Most controls offer a choice of using the look from the current theme or using a format that you specify directly.To change the overall look of your document, choose new Theme elements on the Page Layout tab. To change the looks available in the Quick Style gallery, use the Change Current Quick Style Set command. Both the Themes gallery and the Quick Styles gallery provide reset commands so that you can always restore the look of your document to the original contained in your current template.",
-          "principlasRemark":"On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks. When you create pictures, charts, or diagrams, they also coordinate with your current document look.You can easily change the formatting of selected text in the document text by choosing a look for the selected text from the Quick Styles gallery on the Home tab. You can also format text directly by using the other controls on the Home tab. Most controls offer a choice of using the look from the current theme or using a format that you specify directly.To change the overall look of your document, choose new Theme elements on the Page Layout tab. To change the looks available in the Quick Style gallery, use the Change Current Quick Style Set command. Both the Themes gallery and the Quick Styles gallery provide reset commands so that you can always restore the look of your document to the original contained in your current template.",
+          "classTeachersRemark":"On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks.",
+          "principlasRemark":"On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks.",
           "marksObtainable":1000,
-          "position":10,
+          "position":3,
           "average":60.5
-        }
+        },
+      "published":true
     }
   }
 }

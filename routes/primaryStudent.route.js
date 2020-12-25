@@ -44,6 +44,9 @@ router.post("/register", async (req, res) => {
 
         
         const newStudent = new StudentModel({
+            subjectCombination,
+            midTerm,
+            examination,
             username,
             password: hashedPassword,
             surname,
@@ -53,9 +56,6 @@ router.post("/register", async (req, res) => {
             adminNumber,
             dateOfBirth: Date.now(),
             contacts,
-            subjectCombination,
-            midTerm,
-            examination
         });
 
 
@@ -100,9 +100,9 @@ router.post("/login", async (req, res) => {
             return res.status(400).json({ message: "invalid credentials" });
         }
 
-        // if(!student.paid){
-        //     return res.status(400).json({ message: "no permission to login please contact the school authority" });
-        // }
+        if(!student.paid){
+            return res.status(400).json({ message: "no permission to login please contact the school authority" });
+        }
 
         //creates a token for the user
         const token = jwt.sign({ 

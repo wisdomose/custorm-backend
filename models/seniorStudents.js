@@ -7,6 +7,11 @@ const result = new Schema({
     score:{type:Number, required:true},
 });
 
+const catResult = new Schema({
+    subject:{type:String, required:true},
+    score:{type:Number, required:true}
+})
+
 const remark = new Schema({
         classTeachersRemark: {type:String, required:true},
         principlasRemark: {type:String, required:true},
@@ -36,24 +41,27 @@ const student = new Schema({
         default:undefined
     },
     subjectCombination:[],
-    cat1:[
-        {
-            subject:{type:String, required:true},
-            score:{type:Number, required:true}
+    cat1:{
+        published:{type:Boolean, default:false},
+        results:{
+            type:[catResult],
+            default:undefined
         }
-    ],
-    cat2:[
-        {
-            subject:{type:String, required:true},
-            score:{type:Number, required:true}
+    },
+    cat2:{
+        published:{type:Boolean, default:false},
+        results:{
+            type:[catResult],
+            default:undefined
         }
-    ],
+    },
     examination:{
+        published:{type:Boolean, default:false},
         results: {
             type:[result],
             default:undefined
         },
-        remarks:remark,
+        remarks:remark
     }
 });
 

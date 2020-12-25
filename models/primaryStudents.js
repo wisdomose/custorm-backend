@@ -51,6 +51,7 @@ const student = new Schema({
             default:undefined
         },
         remarks: remark,
+        published:{type:Boolean, default:false}
     },
     examination:{
         results: {
@@ -58,6 +59,7 @@ const student = new Schema({
             default:undefined
         },
         remarks:remark,
+        published:{type:Boolean, default:false}
     }
 });
 
