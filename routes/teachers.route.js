@@ -2,6 +2,7 @@ const router = require("express").Router();
 const TeacherModel = require("../models/teachers");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const validateToken = require("../middlewares/validateToken")
 
 router.get("/", async(req, res)=>{
     try{
@@ -114,12 +115,23 @@ router.post("/login", async (req,res)=>{
             id: teacher._id,
             username: teacher.username,
             }, process.env.JWT_TOKEN);
-        return res.json({
+        return res.status(200).json({
             token
         });
     }catch(error){
         console.log(error)
         res.status(401).json(error)
+    }
+})
+
+router.get("/profile/:token", validateToken, async(req,res)=>{
+    try{
+         const teacher = await TeacherModel.findById(req.userID);
+         res.status(200).json(teacher);
+    }catch(error){
+        res.status(500).json({
+            message:"student not found"
+        })
     }
 })
 
