@@ -16,13 +16,7 @@ remember to set a route to handle update of password
 
 router.post("/register", async (req, res) => {
     try {
-        const { username, password, surname, firstname, lastname, klass, contacts, subjectCombination, midTerm, examination, adminNumber  } = req.body;
-
-        if (!password || !username || !surname || !firstname || !lastname || !klass || !adminNumber) {
-            return res.status(400).json({
-                message: "check input credentials"
-            });
-        }
+        const { username, password} = req.body;
 
         if (password.length <= 5) {
             return res.status(400).json({
@@ -44,27 +38,18 @@ router.post("/register", async (req, res) => {
 
         
         const newStudent = new StudentModel({
-            subjectCombination,
-            midTerm,
-            examination,
-            username,
+            ...req.body,
             password: hashedPassword,
-            surname,
-            firstname,
-            lastname,
-            class: klass,
-            adminNumber,
             dateOfBirth: Date.now(),
-            contacts,
         });
 
 
         const savedStudent = await newStudent.save();
         res.json(savedStudent);
     }
-    catch (err) {
-        console.log(err)
-        res.status(500).json(err);
+    catch (error) {
+        console.log(error)
+        res.status(404).json(error);
     }
 
 })
@@ -121,17 +106,7 @@ router.post("/login", async (req, res) => {
 
 router.delete("/delete/:id", validateAdmin, async(req,res)=>{
     try{
-        // checks if theh student exists
-        const student = await StudentModel.findById(req.params.id);
 
-        // prints an error if he dosent exist
-        if(!student){
-            return res.status(404).json({
-                message:"student not found"
-            }) 
-        }
-
-        // if he exists, delete the account
         await StudentModel.findByIdAndDelete(req.params.id, (error, doc)=>{
             if(error){
                 return res.status(404).json({
@@ -176,7 +151,7 @@ router.put("/update", validateAdmin, async(req,res)=>{
         })
     }    
     catch (error){
-        res.status(200).json(error)
+        res.status(404).json(error)
     }
 })
 

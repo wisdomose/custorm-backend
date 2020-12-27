@@ -1,0 +1,107 @@
+{
+    "staff 1":{
+    "username":"hilary",
+    "password":"123456",
+    "surname":"clinton",
+    "firstname":"hilary",
+    "dateAppointed":"23435345435",
+    "dateOfBirth":"1394308323243",
+    "accountType":"teacher",
+    "sujects":[
+        {
+            "subject":"basic science",
+            "class":["jss1", "jss2", "jss3"]
+        },{
+            "subject":"geography",
+            "class":["sss1", "sss2", "sss3"]
+        },{
+            "subject":"economics",
+            "class":["sss1", "sss2", "sss3"]
+        }
+    ],
+    "formTeacher":"jss2",
+    "contacts": [
+        {
+          "name": "mr divine patrick",
+          "contact": "09054057103"
+        },
+        {
+          "name": "mrs divine elizabeth",
+          "contact": "09039392400"
+        }
+      ]
+    },
+
+    "staff 2":{
+    "username":"eno",
+    "password":"123456",
+    "surname":"micheal",
+    "firstname":"eno",
+    "dateAppointed":"23435345435",
+    "dateOfBirth":"1394308323243",
+    "formTeacher":"wonderland",
+    "accountType":"teacher",
+    "contacts": [
+        {
+          "name": "mr divine patrick",
+          "contact": "09054057103"
+        },
+        {
+          "name": "mrs divine elizabeth",
+          "contact": "09039392400"
+        }
+      ]
+    },
+
+    "staff 3":{
+      "username":"glory",
+      "password":"123456",
+      "surname":"okon",
+      "firstname":"glory",
+      "dateAppointed":"23435345435",
+      "dateOfBirth":"1394308323243",
+      "accountType":"care giver",
+      "contacts": [
+          {
+            "name": "mr divine patrick",
+            "contact": "09054057103"
+          },
+          {
+            "name": "mrs divine elizabeth",
+            "contact": "09039392400"
+          }
+        ]
+      },
+    
+    "staff 4":{
+      "username":"timothy",
+      "password":"123456",
+      "surname":"clement",
+      "firstname":"timothy",
+      "dateAppointed":"23435345435",
+      "dateOfBirth":"1394308323243",
+      "accountType":"teacher",
+      "sujects":[
+          {
+              "subject":"basic science",
+              "class":["jss1", "jss2", "jss3"]
+          },{
+              "subject":"geography",
+              "class":["sss1", "sss2", "sss3"]
+          },{
+              "subject":"economics",
+              "class":["sss1", "sss2", "sss3"]
+          }
+      ],
+      "contacts": [
+          {
+            "name": "mr divine patrick",
+            "contact": "09054057103"
+          },
+          {
+            "name": "mrs divine elizabeth",
+            "contact": "09039392400"
+          }
+        ]
+      }
+}

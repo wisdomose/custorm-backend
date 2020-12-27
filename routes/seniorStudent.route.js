@@ -180,7 +180,7 @@ router.put("/update", validateAdmin, async(req,res)=>{
         })
     }    
     catch (error){
-        res.status(200).json(error)
+        res.status(404).json(error)
     }
 })
 

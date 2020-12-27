@@ -18,4 +18,6 @@ mongoose.connect(process.env.CONNECTION_STRING,
 
 app.use("/student/primary", require("./routes/primaryStudent.route"))
 app.use("/student/secondary", require("./routes/seniorStudent.route"))
-app.use("/api", require("./routes/general.route"))
+app.use("/general", require("./routes/general.route"))
+app.use("/teacher", require("./routes/teachers.route"))
+app.use("/notification", require("./routes/notification.route"))
