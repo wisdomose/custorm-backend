@@ -123,7 +123,7 @@ router.post("/login", async (req, res) => {
     }
 })
 
-router.delete("/delete/:id", validateAdmin, async(req,res)=>{
+router.delete("/delete/:id",  async(req,res)=>{
     try{
         // checks if theh student exists
         const student = await StudentModel.findById(req.params.id);
@@ -154,7 +154,7 @@ router.delete("/delete/:id", validateAdmin, async(req,res)=>{
     }
 })
 
-router.put("/update", validateAdmin, async(req,res)=>{
+router.put("/update",  async(req,res)=>{
     try{
 
         // get the student with the id
@@ -201,7 +201,7 @@ router.get("/", async(req,res)=>{
     
 })
 
-router.get("/profile/:token", validateToken, async(req,res)=>{
+router.get("/profile/:token", async(req,res)=>{
     try{
          const student = await StudentModel.findById(req.userID);
          res.status(200).json(student);
@@ -212,9 +212,9 @@ router.get("/profile/:token", validateToken, async(req,res)=>{
     }
 })
 
-router.get("/profile/:class", async(req,res)=>{
+router.get("/find/:condition", async(req,res)=>{
     try{
-        const students = await StudentModel.find({class:req.params.class});
+        const students = await StudentModel.find({class:req.params.condition});
         if(!students){
             res.status(400).json({
                 message:"no students found"
