@@ -212,6 +212,20 @@ router.get("/profile/:token", validateToken, async(req,res)=>{
     }
 })
 
+router.get("/profile/:class", async(req,res)=>{
+    try{
+        const students = await StudentModel.find({class:req.params.class});
+        if(!students){
+            res.status(400).json({
+                message:"no students found"
+            })
+        }
+        res.status(200).json(students)
+    }catch(error){
+        res.status(400).json(error)
+    }
+})
+
 router.get("/validate/:token", validateToken, async(req,res)=>{
     try{
          const student = await StudentModel.findById(req.userID);

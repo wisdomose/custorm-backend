@@ -1,0 +1,153 @@
+{
+    "adminNumber":"0010",
+    "paid":true,
+    "profilePic":"",
+    "dateOfBirth":"122222222222222222222222",
+    "username": "pauline",
+    "password": "123456",
+    "surname": "pauline",
+    "firstname": "frankline",
+    "lastname": "ejiro",
+    "klass": "sss3",
+    "contacts": [
+      {
+        "name": "mr divine patrick",
+        "contact": "09054057103"
+      },
+      {
+        "name": "mrs divine elizabeth",
+        "contact": "09039392400"
+      }
+    ],
+    "subjectCombination": ["mathematics", "english language", "civic education", "agricultural science", "physics", "chemistry",
+      "biology", "geography", "tourism", "further mathematics"],
+    "cat1":{
+      "results":[
+        {
+        "subject": "mathematics",
+        "score": 15
+      },
+      {
+        "subject": "english language",
+        "score": 15
+      },
+      {
+        "subject": "civic education",
+        "score": 5
+      },          {
+        "subject": "agricultural science",
+        "score": 10
+      },          {
+        "subject": "physics",
+        "score": 7
+      },          {
+        "subject": "chemistry",
+        "score": 3
+      },          {
+        "subject": "biology",
+        "score": 11
+      },          {
+        "subject": "geography",
+        "score": 9
+      },          {
+        "subject": "tourism",
+        "score": 10
+      },          {
+        "subject": "further mathematics",
+        "score": 1
+      }],
+      "published":true
+    },
+    "cat2":{
+      "results":[
+        {
+        "subject": "mathematics",
+        "score": 10
+    },
+    {
+        "subject": "english language",
+        "score": 15
+    },
+    {
+        "subject": "civic education",
+        "score": 12
+    },          {
+        "subject": "agricultural science",
+        "score": 7
+    },          {
+      "subject": "physics",
+      "score": 5
+    },          {
+      "subject": "chemistry",
+      "score": 12
+    },          {
+      "subject": "biology",
+      "score": 14
+    },          {
+      "subject": "geography",
+      "score": 5
+    },          {
+      "subject": "tourism",
+      "score": 1
+    },          {
+      "subject": "further mathematics",
+      "score": 3
+    }],
+    "published":true
+    },
+    "examination": {
+      "results":[
+          {
+            "subject": "mathematics",
+            "cat":27,
+            "score": 50
+          },
+          {
+            "subject": "english language",
+            "cat":30,
+            "score": 70
+          },
+          {
+            "subject": "civic education",
+            "cat":30,
+            "score": 40
+          },          {
+            "subject": "agricultural science",
+            "cat":12,
+            "score": 35
+          },          {
+            "subject": "physics",
+            "cat":30,
+            "score": 30
+          },          {
+            "subject": "chemistry",
+            "cat":13,
+            "score": 12
+          },          {
+            "subject": "biology",
+            "cat":21,
+            "score": 12
+          },          {
+            "subject": "geography",
+            "cat":29,
+            "score": 12
+          },          {
+            "subject": "tourism",
+            "cat":14.5,
+            "score": 12
+          },          {
+            "subject": "further mathematics",
+            "cat":12.3,
+            "score": 12
+          }
+        ],
+        "remarks":{
+          "classTeachersRemark":"On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks.",
+          "principlasRemark":"On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks.",
+          "marksObtainable":1000,
+          "position":3,
+          "average":60.5
+        },
+      "published":true
+    }
+  }
