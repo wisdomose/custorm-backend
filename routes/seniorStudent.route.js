@@ -154,16 +154,16 @@ router.delete("/delete/:id",  async(req,res)=>{
     }
 })
 
-router.put("/update",  async(req,res)=>{
+router.put("/update/:id",  async(req,res)=>{
     try{
 
         // get the student with the id
-        const student = await StudentModel.findById(req.user.id);
+        const student = await StudentModel.findById(req.params.id);
 
         // return error if student dosent exist
         if(!student){
             return res.status(404).json({
-                message:"authorization failed"
+                message:"failed to update"
             }) 
         }
 
@@ -174,9 +174,7 @@ router.put("/update",  async(req,res)=>{
                     message:"update failed"
                 }) 
             }
-            return res.status(200).json({
-                message:"successfully updated record"
-            })
+            return res.status(200).json(doc)
         })
     }    
     catch (error){
