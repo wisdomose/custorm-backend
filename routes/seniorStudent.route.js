@@ -44,7 +44,7 @@ router.post("/register", async (req, res) => {
         const salt = await bcrypt.genSalt();
         const hashedPassword = await bcrypt.hash(password, salt);
 
-        
+
         const newStudent = new StudentModel({
             subjectCombination,
             cat1,
@@ -104,16 +104,16 @@ router.post("/login", async (req, res) => {
             return res.status(400).json({ message: "invalid credentials" });
         }
 
-        if(!student.paid){
+        if (!student.paid) {
             return res.status(400).json({ message: "no permission to login please contact the school authority" });
         }
 
         //creates a token for the user
-        const token = jwt.sign({ 
+        const token = jwt.sign({
             id: student._id,
             username: student.username,
-            paid:student.paid
-            }, process.env.JWT_TOKEN);
+            paid: student.paid
+        }, process.env.JWT_TOKEN);
         return res.json({
             token
         });
@@ -123,116 +123,119 @@ router.post("/login", async (req, res) => {
     }
 })
 
-router.delete("/delete/:id",  async(req,res)=>{
-    try{
+router.delete("/delete/:id", async (req, res) => {
+    try {
         // checks if theh student exists
         const student = await StudentModel.findById(req.params.id);
 
         // prints an error if he dosent exist
-        if(!student){
+        if (!student) {
             return res.status(404).json({
-                message:"student not found"
-            }) 
+                message: "student not found"
+            })
         }
 
         // if he exists, delete the account
-        await StudentModel.findByIdAndDelete(req.params.id, (error, doc)=>{
-            if(error){
+        await StudentModel.findByIdAndDelete(req.params.id, (error, doc) => {
+            if (error) {
                 return res.status(404).json({
-                    message:"student not found"
-                }) 
+                    message: "student not found"
+                })
             }
-            return(
+            return (
                 res.status(200).json({
-                    message:"account successfully deleted"
+                    message: "account successfully deleted"
                 })
             )
         })
     }
-    catch (error){
+    catch (error) {
         res.status(200).json(err)
     }
 })
 
-router.put("/update/:id",  async(req,res)=>{
-    try{
+router.put("/update", async (req, res) => {
+    try {
+        const {type, id} = req.query.account;
+        const result = req.body.result;
+        const student = await StudentModel.findById(id);
 
-        // get the student with the id
-        const student = await StudentModel.findById(req.params.id);
-
-        // return error if student dosent exist
-        if(!student){
-            return res.status(404).json({
-                message:"failed to update"
-            }) 
-        }
-
-        // update the student record
-        StudentModel.findByIdAndUpdate(req.user.id, req.body, {useFindAndModify:false}, (error, doc)=>{
-            if (error){
-                return res.status(404).json({
-                    message:"update failed"
-                }) 
+        switch(type){
+            case "cat1":
+                student.cat1.results = result;
+                break;
+            case "cat2":
+                student.cat2.results = result;
+                break;
+            case "examination":
+                student.examination.results = result;
+                break
+            default:
+                res.status(400).json({
+                    message:"bad request"
+                })
+                break;
             }
-            return res.status(200).json(doc)
-        })
-    }    
-    catch (error){
+
+        await student.save()
+            .then(doc=>res.json(doc))
+        }
+     catch (error) {
         res.status(404).json(error)
     }
 })
 
-router.get("/", async(req,res)=>{
-    try{
+router.get("/", async (req, res) => {
+    try {
         const students = await StudentModel.find({});
-        if(!students){
+        if (!students) {
             res.status(404).json({
-                message:"Oops! students not found"
+                message: "Oops! students not found"
             })
         }
 
         res.status(200).json(students)
     }
-    catch (error){
+    catch (error) {
         res.status(200).json(error)
     }
-    
+
 })
 
-router.get("/profile/:token", async(req,res)=>{
-    try{
-         const student = await StudentModel.findById(req.userID);
-         res.status(200).json(student);
-    }catch(error){
+router.get("/profile/:token", async (req, res) => {
+    try {
+        const student = await StudentModel.findById(req.userID);
+        res.status(200).json(student);
+    } catch (error) {
         res.status(500).json({
-            message:"student not found"
+            message: "student not found"
         })
     }
 })
 
-router.get("/find/:condition", async(req,res)=>{
-    try{
-        const students = await StudentModel.find({class:req.params.condition});
-        if(!students){
+router.get("/find/:condition", async (req, res) => {
+    try {
+        const students = await StudentModel.find({ class: req.params.condition });
+        if (!students) {
             res.status(400).json({
-                message:"no students found"
+                message: "no students found"
             })
         }
         res.status(200).json(students)
-    }catch(error){
+    } catch (error) {
         res.status(400).json(error)
     }
 })
 
-router.get("/validate/:token", validateToken, async(req,res)=>{
-    try{
-         const student = await StudentModel.findById(req.userID);
-         res.status(200).json({
-             message:"valid token"
-         });
-    }catch(error){
+router.get("/validate/:token", validateToken, async (req, res) => {
+    try {
+        const student = await StudentModel.findById(req.userID);
+        res.status(200).json({
+            message: "valid token"
+        });
+    } catch (error) {
         res.status(500).json({
-            message:"invalid token"
+            message: "invalid token"
         })
     }
 })

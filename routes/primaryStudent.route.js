@@ -126,31 +126,29 @@ router.delete("/delete/:id", validateAdmin, async(req,res)=>{
 })
 
 router.put("/update", validateAdmin, async(req,res)=>{
-    try{
+    try {
+        const {type, id} = req.query.account;
+        const result = req.body.result;
+        const student = await StudentModel.findById(id);
 
-        // get the student with the id
-        const student = await StudentModel.findById(req.user.id);
-
-        // return error if student dosent exist
-        if(!student){
-            return res.status(404).json({
-                message:"authorization failed"
-            }) 
-        }
-
-        // update the student record
-        StudentModel.findByIdAndUpdate(req.user.id, req.body, {useFindAndModify:false}, (error, doc)=>{
-            if (error){
-                return res.status(404).json({
-                    message:"update failed"
-                }) 
+        switch(type){
+            case "midterm":
+                student.midTerm.results = result;
+                break;
+            case "examination":
+                student.examination.results = result;
+                break
+            default:
+                res.status(400).json({
+                    message:"bad request"
+                })
+                break;
             }
-            return res.status(200).json({
-                message:"successfully updated record"
-            })
-        })
-    }    
-    catch (error){
+
+        await student.save()
+            .then(doc=>res.json(doc))
+        }
+     catch (error) {
         res.status(404).json(error)
     }
 })
