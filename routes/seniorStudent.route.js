@@ -157,18 +157,18 @@ router.delete("/delete/:id", async (req, res) => {
 router.put("/update", async (req, res) => {
     try {
         const {type, id} = req.query.account;
-        const result = req.body.result;
+        const result = req.body;
         const student = await StudentModel.findById(id);
 
         switch(type){
             case "cat1":
-                student.cat1.results = result;
+                student.cat1 = result;
                 break;
             case "cat2":
-                student.cat2.results = result;
+                student.cat2 = result;
                 break;
             case "examination":
-                student.examination.results = result;
+                student.examination = result;
                 break
             default:
                 res.status(400).json({

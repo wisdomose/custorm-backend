@@ -133,10 +133,10 @@ router.put("/update", validateAdmin, async(req,res)=>{
 
         switch(type){
             case "midterm":
-                student.midTerm.results = result;
+                student.midTerm = result;
                 break;
             case "examination":
-                student.examination.results = result;
+                student.examination = result;
                 break
             default:
                 res.status(400).json({
