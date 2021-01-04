@@ -202,7 +202,7 @@ router.get("/", async (req, res) => {
 
 })
 
-router.get("/profile/:token", async (req, res) => {
+router.get("/profile/:token", validateToken, async (req, res) => {
     try {
         const student = await StudentModel.findById(req.userID);
         res.status(200).json(student);
