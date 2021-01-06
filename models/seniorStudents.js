@@ -14,7 +14,7 @@ const catResult = new Schema({
 
 const remark = new Schema({
         classTeachersRemark: {type:String, required:true},
-        principlasRemark: {type:String, required:true},
+        principalsRemark: {type:String, required:true},
         position: {type:Number, required:true},
         average: {type:Number, required:true},
 })
